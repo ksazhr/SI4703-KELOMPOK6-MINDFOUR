@@ -1,4 +1,3 @@
-import joblib
 import pandas as pd
 import streamlit as st
 import pandas as pd
@@ -6,6 +5,7 @@ from pyngrok import ngrok
 import threading
 import time
 import os
+import joblib
 
 # Load model dan dataset
 try:
