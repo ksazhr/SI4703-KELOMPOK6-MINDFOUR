@@ -2,5 +2,6 @@ numpy==2.2.5
 pandas==2.2.3
 streamlit
 joblib
+pyngrok
 scikit-learn
 pip==25.1.1
