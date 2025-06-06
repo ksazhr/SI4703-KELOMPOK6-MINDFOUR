@@ -1,10 +1,6 @@
 import pandas as pd
 import streamlit as st
 import pandas as pd
-from pyngrok import ngrok
-import threading
-import time
-import os
 import joblib
 
 # Load model dan dataset
@@ -86,17 +82,3 @@ else:
         st.error(f"Gagal melakukan prediksi: {e}")
 
 
-
-# Jalankan Streamlit secara paralel
-def run_streamlit():
-    os.system("streamlit run stream-rekomendasi-film.py --server.port 8501")
-
-thread = threading.Thread(target=run_streamlit, daemon=True)
-thread.start()
-
-# Tunggu Streamlit siap
-time.sleep(5)
-
-# Buat tunnel ngrok
-public_url = ngrok.connect(addr=8501)
-print(f"✅ Streamlit app is live at: {public_url}")
