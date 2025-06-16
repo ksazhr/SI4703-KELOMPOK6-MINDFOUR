@@ -3,4 +3,6 @@ pandas==2.2.3
 streamlit
 joblib
 scikit-learn
+matplotlib.pyplot
+seaborn
 pip==25.1.1
